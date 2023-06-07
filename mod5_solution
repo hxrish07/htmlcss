@@ -1,19 +1,28 @@
-document.addEventListener("DOMContentLoaded", function(event) {
-  // Add click event listener to the Specials tile
-  var specialsTile = document.getElementById("specials-tile");
-  specialsTile.addEventListener("click", redirectToRandomCategoryPage);
-});
-
-function redirectToRandomCategoryPage() {
-  // Array of available categories
-  var categories = ["Lunch", "Dinner", "Sushi", "Burgers", "Pasta", "Seafood"];
-
-  // Generate a random index to select a category
-  var randomIndex = Math.floor(Math.random() * categories.length);
-
-  // Get the random category
-  var randomCategory = categories[randomIndex];
-
-  // Redirect the user to the random category page
-  window.location.href = "category.html?name=" + randomCategory;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Restaurant Web App</title>
+</head>
+<body>
+  <header>
+    <h1>Restaurant Web App</h1>
+  </header>
+  <main>
+    <section class="section">
+      <div class="section-title">Chicken</div>
+      <div class="section-content">Dummy text for Chicken section</div>
+    </section>
+    <section class="section">
+      <div class="section-title">Beef</div>
+      <div class="section-content">Dummy text for Beef section</div>
+    </section>
+    <section class="section">
+      <div class="section-title">Sushi</div>
+      <div class="section-content">Dummy text for Sushi section</div>
+    </section>
+  </main>
+</body>
+</html>
