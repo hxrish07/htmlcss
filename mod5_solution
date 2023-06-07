@@ -1,1 +1,19 @@
+document.addEventListener("DOMContentLoaded", function(event) {
+  // Add click event listener to the Specials tile
+  var specialsTile = document.getElementById("specials-tile");
+  specialsTile.addEventListener("click", redirectToRandomCategoryPage);
+});
 
+function redirectToRandomCategoryPage() {
+  // Array of available categories
+  var categories = ["Lunch", "Dinner", "Sushi", "Burgers", "Pasta", "Seafood"];
+
+  // Generate a random index to select a category
+  var randomIndex = Math.floor(Math.random() * categories.length);
+
+  // Get the random category
+  var randomCategory = categories[randomIndex];
+
+  // Redirect the user to the random category page
+  window.location.href = "category.html?name=" + randomCategory;
+}
